@@ -1,3 +1,15 @@
+# Fork of [derronqi/yolov8-face](https://github.com/derronqi/yolov8-face)
+
+Differences between original repository and fork:
+
+* Compatibility with PyTorch >=2.0. (🔥)
+
+# Installation
+
+```shell
+pip install -r requirements.txt
+```
+
 # yolov8-face
 
 | Method          |  Test Size | Easy  | Medium | Hard  | FLOPs (B) @640 | weights  |

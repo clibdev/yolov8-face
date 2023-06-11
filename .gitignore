@@ -1,0 +1,10 @@
+*/__pycache__
+/.idea
+*.pt
+*.onnx
+/data/widerface/val/images
+/widerface_evaluate/widerface_txt
+/widerface_evaluate/box_overlaps.c
+/widerface_evaluate/**/*.so
+/widerface_evaluate/**/*.o
+/runs
