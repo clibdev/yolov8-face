@@ -7,6 +7,8 @@ Differences between original repository and fork:
 * Sample script [detect.py](detect.py) for inference.
 * The following deprecations has been fixed:
   * DeprecationWarning: 'np.float' is a deprecated alias for builtin 'float'.
+  * FutureWarning: Cython directive 'language_level' not set.
+  * Cython Warning: Using deprecated NumPy API.
 
 # Installation
 

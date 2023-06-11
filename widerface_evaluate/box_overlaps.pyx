@@ -24,8 +24,8 @@ def bbox_overlaps(
     -------
     overlaps: (N, K) ndarray of overlap between boxes and query_boxes
     """
-    cdef unsigned int N = boxes.shape[0]
-    cdef unsigned int K = query_boxes.shape[0]
+    cdef unsigned int N = (<object> boxes).shape[0]
+    cdef unsigned int K = (<object> query_boxes).shape[0]
     cdef np.ndarray[DTYPE_t, ndim=2] overlaps = np.zeros((N, K), dtype=DTYPE)
     cdef DTYPE_t iw, ih, box_area
     cdef DTYPE_t ua
