@@ -5,6 +5,7 @@ Differences between original repository and fork:
 * Compatibility with PyTorch >=2.0. (🔥)
 * Original pretrained models from GitHub [releases page](https://github.com/clibdev/yolov8-face/releases). (🔥)
 * Sample script [detect.py](detect.py) for inference.
+* Sample script [export.py](export.py) to export model to ONNX format.
 * The following deprecations has been fixed:
   * DeprecationWarning: 'np.float' is a deprecated alias for builtin 'float'.
   * FutureWarning: Cython directive 'language_level' not set.
@@ -18,9 +19,9 @@ pip install -r requirements.txt
 
 # yolov8-face
 
-| Method  | Test Size | Easy | Medium | Hard | FLOPs (B) @640 | weights                                                                                    |
-|---------|-----------|------|--------|------|----------------|--------------------------------------------------------------------------------------------|
-| yolov8n | 640       | 94.5 | 92.2   | 79.0 | -              | [PyTorch](https://github.com/clibdev/yolov8-face/releases/latest/download/yolov8n-face.pt) |
+| Method  | Test Size | Easy | Medium | Hard | FLOPs (B) @640 | weights                                                                                                                                                                               |
+|---------|-----------|------|--------|------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| yolov8n | 640       | 94.5 | 92.2   | 79.0 | -              | [PyTorch](https://github.com/clibdev/yolov8-face/releases/latest/download/yolov8n-face.pt), [ONNX](https://github.com/clibdev/yolov8-face/releases/latest/download/yolov8n-face.onnx) |
 
 # Inference
 
@@ -44,4 +45,13 @@ python setup.py build_ext --inplace
 ```
 ```shell
 python evaluation.py
+```
+
+# Export to ONNX format
+
+```shell
+pip install onnx
+```
+```shell
+python export.py --weights yolov8n-face.pt
 ```

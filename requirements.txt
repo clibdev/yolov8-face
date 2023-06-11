@@ -8,3 +8,6 @@ scipy>=1.10.0
 thop>=0.1.1
 psutil>=5.9.0
 Cython>=0.29.35
+
+### Optional
+# onnx>=1.14.0
