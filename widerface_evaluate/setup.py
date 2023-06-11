@@ -10,4 +10,4 @@ from Cython.Build import cythonize
 import numpy
 
 package = Extension('bbox', ['box_overlaps.pyx'], include_dirs=[numpy.get_include()])
-setup(ext_modules=cythonize([package]))
+setup(ext_modules=cythonize([package], language_level='3str'))
