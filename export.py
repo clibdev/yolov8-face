@@ -16,5 +16,5 @@ if __name__ == '__main__':
         imgsz=opt.img_size,
         dynamic=opt.dynamic,
         device=opt.device,
-        opset=18
+        opset=17
     )
