@@ -18,7 +18,7 @@ Differences between original repository and fork:
 pip install -r requirements.txt
 ```
 
-# yolov8-face
+# Pretrained models
 
 * Download links:
 
