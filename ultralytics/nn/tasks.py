@@ -344,7 +344,7 @@ def torch_safe_load(weight):
     check_suffix(file=weight, suffix='.pt')
     file = attempt_download_asset(weight)  # search online if missing locally
     try:
-        return torch.load(file, map_location='cpu'), file  # load
+        return torch.load(file, map_location='cpu', weights_only=False), file  # load
     except ModuleNotFoundError as e:  # e.name is missing module name
         if e.name == 'models':
             raise TypeError(
