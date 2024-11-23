@@ -596,6 +596,8 @@ def attempt_load_one_weight(weight, device=None, inplace=True, fuse=False):
             m.inplace = inplace  # torch 1.7.0 compatibility
         elif t is nn.Upsample and not hasattr(m, 'recompute_scale_factor'):
             m.recompute_scale_factor = None  # torch 1.11.0 compatibility
+        elif t is StemBlock:
+            m.stem_1.conv.dilation = tuple(int(d) for d in m.stem_1.conv.dilation) # (True, True) -> (1, 1)
 
     # Return model and ckpt
     return model, ckpt

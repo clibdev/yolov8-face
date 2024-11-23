@@ -40,9 +40,9 @@ class SPF(nn.Module):
 
 # yolov7-lite
 class StemBlock(nn.Module):
-    def __init__(self, c1, c2, k=3, s=2, p=None, g=1, act=True):
+    def __init__(self, c1, c2, k=3, s=2, p=None, g=1, d=1, act=True):
         super(StemBlock, self).__init__()
-        self.stem_1 = Conv(c1, c2, k, s, p, g, act)
+        self.stem_1 = Conv(c1, c2, k, s, p, g, d, act)
         self.stem_2a = Conv(c2, c2 // 2, 1, 1, 0)
         self.stem_2b = Conv(c2 // 2, c2, 3, 2, 1)
         self.stem_2p = nn.MaxPool2d(kernel_size=2,stride=2,ceil_mode=True)
