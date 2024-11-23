@@ -2,7 +2,7 @@
 
 Differences between original repository and fork:
 
-* Compatibility with PyTorch >=2.4. (🔥)
+* Compatibility with PyTorch >=2.5. (🔥)
 * Original pretrained models from GitHub [releases page](https://github.com/clibdev/yolov8-face/releases). (🔥)
 * Sample script [detect.py](detect.py) for inference.
 * Sample script [export.py](export.py) to export model to ONNX format.
